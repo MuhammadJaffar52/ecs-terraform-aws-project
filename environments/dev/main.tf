@@ -89,3 +89,50 @@ module "cloudwatch" {
   environment = var.environment
 
 }
+
+
+module "ecs" {
+
+  source = "../../modules/ecs"
+
+
+  project_name = var.project_name
+
+  environment = var.environment
+
+
+  private_subnet_a_id = module.vpc.private_subnet_a_id
+
+  private_subnet_b_id = module.vpc.private_subnet_b_id
+
+
+
+  frontend_security_group_id = module.security.frontend_sg_id
+
+  backend_security_group_id = module.security.backend_sg_id
+
+
+
+  frontend_image = module.ecr.frontend_repository_url
+
+  backend_image = module.ecr.backend_repository_url
+
+
+
+  execution_role_arn = module.iam.execution_role_arn
+
+  task_role_arn = module.iam.task_role_arn
+
+
+
+  frontend_log_group_name = module.cloudwatch.frontend_log_group_name
+
+  backend_log_group_name = module.cloudwatch.backend_log_group_name
+
+
+
+  db_secret_arn = module.secrets_manager.secret_arn
+
+  db_endpoint = module.rds.db_endpoint
+
+}
