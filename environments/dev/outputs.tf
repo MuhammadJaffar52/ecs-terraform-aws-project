@@ -25,3 +25,15 @@ output "frontend_repository_url" {
 output "backend_repository_url" {
   value = module.ecr.backend_repository_url
 }
+output "ecs_execution_role_arn" {
+
+  value = module.iam.execution_role_arn
+
+}
+
+
+output "ecs_task_role_arn" {
+
+  value = module.iam.task_role_arn
+
+}
