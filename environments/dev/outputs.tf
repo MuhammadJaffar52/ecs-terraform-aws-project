@@ -37,3 +37,17 @@ output "ecs_task_role_arn" {
   value = module.iam.task_role_arn
 
 }
+output "frontend_log_group_name" {
+
+  value = module.cloudwatch.frontend_log_group_name
+
+}
+
+
+output "backend_log_group_name" {
+
+  value = module.cloudwatch.backend_log_group_name
+
+
+}
+
