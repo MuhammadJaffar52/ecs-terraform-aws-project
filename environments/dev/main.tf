@@ -59,3 +59,11 @@ module "secrets_manager" {
   db_port = module.rds.db_port
 
 }
+
+
+module "ecr" {
+  source = "../../modules/ecr"
+
+  project_name = var.project_name
+  environment  = var.environment
+}
