@@ -285,8 +285,15 @@ resource "aws_ecs_service" "frontend" {
 
   launch_type = "FARGATE"
 
+  load_balancer {
 
+  target_group_arn = var.frontend_target_group_arn
 
+  container_name = "frontend"
+
+  container_port = 8080
+
+}
 
   network_configuration {
 
@@ -357,8 +364,15 @@ resource "aws_ecs_service" "backend" {
 
   launch_type = "FARGATE"
 
+   load_balancer {
 
+  target_group_arn = var.backend_target_group_arn
 
+  container_name = "backend"
+
+  container_port = 8080
+
+}
 
 
   network_configuration {

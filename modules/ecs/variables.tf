@@ -65,3 +65,17 @@ variable "db_secret_arn" {
 variable "db_endpoint" {
   type = string
 }
+
+
+variable "frontend_target_group_arn" {
+
+  type = string
+
+}
+
+
+variable "backend_target_group_arn" {
+
+  type = string
+
+}

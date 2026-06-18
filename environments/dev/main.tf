@@ -98,10 +98,11 @@ module "ecs" {
 
   project_name = var.project_name
 
-  environment = var.environment
+  environment               = var.environment
+  frontend_target_group_arn = module.alb.frontend_target_group_arn
 
-
-  private_subnet_a_id = module.vpc.private_subnet_a_id
+  backend_target_group_arn = module.alb.backend_target_group_arn
+  private_subnet_a_id      = module.vpc.private_subnet_a_id
 
   private_subnet_b_id = module.vpc.private_subnet_b_id
 
@@ -134,5 +135,27 @@ module "ecs" {
   db_secret_arn = module.secrets_manager.secret_arn
 
   db_endpoint = module.rds.db_endpoint
+
+}
+
+module "alb" {
+
+  source = "../../modules/alb"
+
+
+  project_name = var.project_name
+
+  environment = var.environment
+
+
+  vpc_id = module.vpc.vpc_id
+
+
+  public_subnet_a_id = module.vpc.public_subnet_a_id
+
+  public_subnet_b_id = module.vpc.public_subnet_b_id
+
+
+  alb_security_group_id = module.security.alb_sg_id
 
 }
