@@ -159,3 +159,15 @@ module "alb" {
   alb_security_group_id = module.security.alb_sg_id
 
 }
+
+module "cloudfront" {
+
+  source = "../../modules/cloudfront"
+
+
+  environment = var.environment
+
+
+  alb_dns_name = module.alb.alb_dns_name
+
+}
