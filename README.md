@@ -105,20 +105,35 @@ Features
 AWS Services Used
 
 VPC 
+
 Public/Private Subnets
+
 Internet Gateway 
+
 NAT Gateway 
+
 Route Tables 
+
 Security Groups
+
 ECR 
+
 ECS Fargate 
+
 ALB 
+
 CloudFront 
+
 RDS (PostgreSQL) 
+
 IAM 
+
 CloudWatch Logs 
+
 Secrets Manager 
+
 S3 (Terraform backend) 
+
 DynamoDB (state locking)
 
 
