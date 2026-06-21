@@ -110,12 +110,15 @@ VPC · Public/Private Subnets · Internet Gateway · NAT Gateway · Route Tables
 Repository Structure
 
 ecs-terraform-aws-project
+
 │
 ├── backend-setup/            # Bootstraps the S3 + DynamoDB remote state backend
+
 │
 ├── provider.tf
 ├── variables.tf
 ├── main.tf
+
 │
 ├── environments/
 │   └── dev/
@@ -126,6 +129,7 @@ ecs-terraform-aws-project
 │       ├── variables.tf
 │       └── versions.tf
 │
+
 ├── modules/
 │   ├── alb/
 │   ├── cloudfront/
@@ -137,8 +141,10 @@ ecs-terraform-aws-project
 │   ├── secrets-manager/
 │   ├── security/
 │   └── vpc/
+
 │
 ├── .gitignore
+
 └── README.md
 
 
