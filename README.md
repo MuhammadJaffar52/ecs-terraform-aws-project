@@ -83,13 +83,21 @@ Features
 
 
 ✅ Infrastructure as Code using modular Terraform
+
 ✅ Serverless container orchestration via ECS Fargate (no EC2 to manage)
+
 ✅ CloudFront CDN for global caching, HTTPS, and DDoS mitigation
+
 ✅ Application Load Balancer with path-based routing
+
 ✅ PostgreSQL RDS in a private subnet, reachable only from the backend
+
 ✅ Centralized secrets via AWS Secrets Manager — no hardcoded credentials
+
 ✅ Centralized logging via CloudWatch
+
 ✅ Defense-in-depth network isolation (public/private subnets, scoped security groups)
+
 ✅ Remote Terraform state with S3 backend + DynamoDB state locking
 
 
