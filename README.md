@@ -104,7 +104,22 @@ Features
 
 AWS Services Used
 
-VPC · Public/Private Subnets · Internet Gateway · NAT Gateway · Route Tables · Security Groups · ECR · ECS Fargate · ALB · CloudFront · RDS (PostgreSQL) · IAM · CloudWatch Logs · Secrets Manager · S3 (Terraform backend) · DynamoDB (state locking)
+VPC 
+Public/Private Subnets
+Internet Gateway 
+NAT Gateway 
+Route Tables 
+Security Groups
+ECR 
+ECS Fargate 
+ALB 
+CloudFront 
+RDS (PostgreSQL) 
+IAM 
+CloudWatch Logs 
+Secrets Manager 
+S3 (Terraform backend) 
+DynamoDB (state locking)
 
 
 Repository Structure
@@ -119,27 +134,46 @@ ecs-terraform-aws-project
 ├── variables.tf
 ├── main.tf
 
+
 │
 ├── environments/
+
 │   └── dev/
+
 │       ├── backend.tf
+
 │       ├── main.tf
+
 │       ├── outputs.tf
+
 │       ├── provider.tf
+
 │       ├── variables.tf
+
 │       └── versions.tf
 │
 
+
 ├── modules/
+
 │   ├── alb/
+
 │   ├── cloudfront/
+
 │   ├── cloudwatch/
+
 │   ├── ecr/
+
 │   ├── ecs/
+
 │   ├── iam/
+
 │   ├── rds/
+
 │   ├── secrets-manager/
+
 │   ├── security/
+
 │   └── vpc/
 
 │
