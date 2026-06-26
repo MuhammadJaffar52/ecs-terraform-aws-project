@@ -1,6 +1,6 @@
 resource "aws_secretsmanager_secret" "db_secret" {
 
-  name = "ecs-postgres-secret"
+  name = "ecs-postgres-secrets"
 
   description = "Database credentials for ECS application"
 
