@@ -160,14 +160,3 @@ module "alb" {
 
 }
 
-module "cloudfront" {
-
-  source = "../../modules/cloudfront"
-
-
-  environment = var.environment
-
-
-  alb_dns_name = module.alb.alb_dns_name
-
-}
